@@ -20,79 +20,103 @@
                     <li class="submenu"><a href="#" class="sub">Contacto</a></li>
                 </ul>
             </div>
+            <div class="nav2">
+                <div class="nav-movil">
+                    <img src="../IMG/logo-sp-header.png" alt="Grupo Sp" class="logo-movil">
+                    <img src="../IMG/menu.svg" alt="menu-bar" class="menu" id="boton-menu">
+                </div>
+            </div>
             <div class="texto1">
-                <h1 class="titulo">Contáctanos</h1>
+                <h2 class="titulo">Contáctanos</h2>
             </div>
         </div>
+        <div class="menu-movil" id="menu-movil">
+            <img src="../IMG/equis.svg" alt="menu-bar" class="equis" id="boton-equis">
+            <ul class="movil">
+                <li class="submenu-movil"><a href="#" class="sub-movil">Inicio</a></li>
+                <li class="submenu-movil"><a href="#" class="sub-movil">Sobre nosotros</a></li>
+                <li class="submenu-movil"><a href="#" class="sub-movil">Nuestras empresas</a></li>
+                <li class="submenu-movil"><a href="#" class="sub-movil">Contacto</a></li>
+            </ul>
+        </div>
         <div class="grupo2">
-             <div class="fomrulario">
+            <div class="formulario">
                 <h2 class="titulo-formulario">Déjanos tus datos y nos pondremos en contácto contigo.</h2>
                 <form action="" class="form" id="form">
                     <div class="bloque">
-                        <label for="nombre">Tu nombre (requerido)</label>
-                        <input type="text" name="nombre" class="input" id="nombre">
+                        <label for="nombre" class="label">Tu nombre (requerido)</label>
+                        <input type="text" name="nombre" class="input" id="nombre" required>
+                        <p class="error"></p>
                     </div>
                     <div class="bloque">
-                        <label for="correo">Tu correo electrónico (requerido)</label>
-                        <input type="email" name="correo" class="input" id="correo">
+                        <label for="correo" class="label">Tu correo electrónico (requerido)</label>
+                        <input type="email" name="correo" class="input" id="correo" required>
+                        <p class="error"></p>
                     </div>
                     <div class="bloque">
-                        <label for="telefono">Teléfono (requerido)</label>
-                        <input type="text" name="telefono" class="input" id="telefono">
+                        <label for="telefono" class="label">Teléfono (requerido)</label>
+                        <input type="text" name="telefono" class="input" id="telefono" required>
+                        <p class="error"></p>
                     </div>
                     <div class="bloque">
-                        <label for="empresa">Empresa</label>
-                        <input type="text" name="empresa" class="input" id="empresa">
+                        <label for="empresa" class="label">Empresa</label>
+                        <input type="text" name="empresa" class="input" id="empresa" required>
+                        <p class="error"></p>
                     </div>
                     <div class="bloque">
-                        <label for="mensaje">Tu mensaje</label>
-                        <textarea name="mensaje" id="mensaje"></textarea>
+                        <label for="mensaje" class="label">Tu mensaje</label>
+                        <textarea name="mensaje" id="mensaje" class="mensaje" required></textarea>
+                        <p class="error"></p>
                     </div>
-                    <div class="bloque">
+                    <div class="b1">
                         <input type="checkbox" name="check" class="check" id="check">
-                        <label for="check">Acepto las Politicas de Privacidad de está página</label>
+                        <label for="check" class="acep">Acepto las Politicas de Privacidad de está página</label>
+                        <p class="error"></p>
                     </div>
                     <input type="submit" class="enviar" id="enviar" value="Enviar">
                 </form>
                 <p class="parrafo">Para atención de denuncias o consultas por actos de soborno, escríbanos a</p>
                 <a href="#" class="enlace">denuncias.antisoborno@gruposp.pe</a>
-             </div>
+            </div>
+            <div class="mapa-contacto">
+                <img src="../IMG/mapa1.png" alt="mapa" class="mapa">
+            </div>
         </div>
         <div class="grupo3">
             <ul class="footer">
                 <h4 class="titulo-footer">Dirección</h4>
                 <li class="subfooter">
-                    <a href="#" class="foo">Perú: Avenida José Pardo 434 Piso 5 Edificio LIT ONE, Miraflores, Lima</a>
+                    <a href="#" class="foo">Perú: <span class="span">Avenida José Pardo 434 Piso 5 Edificio LIT ONE, Miraflores, Lima</span></a>
                 </li>
                 <li class="subfooter">
-                    <a href="#" class="foo">Colombia: Carrera 17 # 89-31 Oficina 702, Bogotá</a>
+                    <a href="#" class="foo">Colombia: <span class="span">Carrera 17 # 89-31 Oficina 702, Bogotá</span></a>
                 </li>
                 <li class="subfooter">
-                    <a href="#" class="foo">Panamá: Plaza 2000, Calle 52 Este y Calle 50, Marbella</a>
+                    <a href="#" class="foo">Panamá: <span class="span">Plaza 2000, Calle 52 Este y Calle 50, Marbella</span></a>
                 </li>
                 <li class="subfooter">
-                    <a href="#" class="foo">Chile: Avenida Kennedy 7900 of 809, Vitacura.</a>
+                    <a href="#" class="foo">Chile: <span class="span"> Avenida Kennedy 7900 of 809, Vitacura.</span></a>
                 </li>
-            </ul>
+            </ul>   
             <ul class="footer">
                 <h4 class="titulo-footer">Contacto</h4>
                 <li class="subfooter">
-                    <a href="#" class="foo">info@gruposp.pea</a>
+                    <a href="#" class="foo"><span class="span">info@gruposp.pea</span></a>
                 </li>
                 <li class="subfooter">
-                    <a href="#" class="foo">+51 1 715 5585</a>
+                    <a href="#" class="foo"><span class="span">+51 1 715 5585</span></a>
                 </li>
             </ul>
             <ul class="footer">
                 <h4 class="titulo-footer">Redes Sociales</h4>
                 <li class="subfooter">
-                    <a href="#" class="foo">in</a>
+                    <a href="#" class="foo"><span class="span in">in</span></a>
                 </li>
             </ul>
             <ul class="footer">
                 <h4 class="titulo-footer">Enlaces</h4>
                 <li class="subfooter">
-                    <a href="#" class="foo">Política de privacidad y protección de datos personales</a>
+                    <a href="#" class="foo foo2">Política de privacidad y protección de datos personales</a>
                 </li>
             </ul>
         </div>
@@ -100,5 +124,7 @@
             <p class="parrafo-copy">© 2025 Grupo SP | Todos los derechos reservados.</p>
         </div>
     </div>
+    <script src="../JS/formulario.js"></script>
+    <script src="../JS/menu-movil.js"></script>
 </body>
 </html>

@@ -1,2 +1,332 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Playfair Display', serif;
+}
+
+img{
+    width: 1.5rem;
+}
+
+.contenedor{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "parte1"
+    "parte2"
+    "parte3"
+    "parte4"
+    "parte5";
+    position: relative;
+}
+
+
+.grupo1 {
+    width: 100%;
+    grid-area: parte1;
+    background-image: url(../IMG/oficina-2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 50dvh;
+    overflow: hidden; 
+}
+
+.grupo1::before {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.68; 
+    z-index: 1; 
+}
+
+.nav{
+    display: none;
+}
+
+.nav2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav, .nav2, .texto1{
+    position: relative;
+    z-index: 2;
+}
+
+.nav-movil{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0.9rem;
+}
+
+.logo-movil{
+    width: 9rem;
+}
+
+.menu-movil {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.9;
+    z-index: 999;
+}
+
+.menu-movil.activo {
+    display: flex; 
+}
+
+
+.equis{
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    height: 1.5rem;
+}
+
+.movil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 1.8rem;
+    height: 100vh;
+}
+
+.submenu-movil{
+    list-style: none;
+}
+
+.sub-movil{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #1c1c1c;
+}
+
+.texto1{
+    text-align: center;
+    color: #fff;
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.titulo{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.grupo2{
+    font-family: 'Poppins';
+    grid-area: parte2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 1.2rem 1.5rem;
+}
+
+
+.titulo-formulario{
+    padding: 0 2rem 0 0;
+    font-size: 1.43rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.bloque{
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.label{
+    color: #747070;
+    font-size: 1rem;
+}
+
+.input{
+    display: block;
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    outline: none;
+    border-radius: 0.3rem;
+    border: 1.5px solid #ccc;
+    margin-top: 0.3rem;
+}
+
+.error {
+    margin: 0.3rem 0 0 0;
+    color: red;
+    font-size: 0.8rem;
+}
+
+.mensaje{
+    display: block;
+    width: 100%;
+    height: 15rem;
+    margin-top: 0.3rem;
+    border: 1.5px solid #ccc;
+    padding: 0.55rem 0.7rem;
+    resize: none;
+}
+
+.b1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.acep{
+    font-size: 0.8rem;
+}
+
+.enviar{
+    background-color: #fff;
+    outline: none;
+    border: 2px solid #ccc;
+    padding: 0.7rem 1.8rem;
+    border-radius: 2rem;
+    color: #242424;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 1.3rem;
+}
+
+.enviar:hover{
+    border: 2px solid #000;
+}
+
+.parrafo{
+    margin-top: 1.7rem;
+    color: #242424c0;
+}
+
+.enlace{
+    text-decoration: none;
+    color: #242424c0;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.mapa-contacto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.mapa {
+    width: 100%;
+    height: auto;
+    max-height: 25rem;
+}
+
+
+.grupo3{
+    grid-area: parte3;
+    background-color: #242424;
+    padding: 1rem 1rem;
+}
+
+.footer{
+    color: #fff;
+    margin: 2.5rem 0;
+}
+
+.foo{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.foo:hover,
+.foo:hover .span,
+.span:hover,
+.span:hover .foo {
+    color: #7c7a7a;
+    cursor: pointer;
+}
+
+.subfooter{
+    list-style: none;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.foo2{
+    color: #ffffffc2;
+}
+
+.titulo-footer{
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.span{
+    font-family: 'Poppins';
+    color: #fffffff7;
+    font-weight: 200;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.in{
+    font-family: 'Poppins', 'Serif';
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #707070;
+}
+
+.grupo4{
+    grid-area: parte4;
+    background-color: #1c1c1c;
+    padding: 2rem 0;
+    color: #626060;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 0.85rem;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
