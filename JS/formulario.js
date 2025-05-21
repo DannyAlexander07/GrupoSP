@@ -35,6 +35,17 @@ function validarCampoVacio(input, campo) {
         return true;
     }
 }
+function validarNombre(input) {
+    const nombreRegex = /^[a-zA-ZÀ-ÿ\s]+$/;
+    if (!nombreRegex.test(input.value.trim())) {
+        mostrarError(input, 'El nombre solo puede contener letras y espacios.');
+        return false;
+    }
+    else {
+        eliminarError(input);
+        return true;
+    }
+}
 function validarCorreo(input) {
     const correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!correoRegex.test(input.value.trim())) {
@@ -49,7 +60,7 @@ function validarCorreo(input) {
 function validarTelefono(input) {
     const telefonoRegex = /^\+?\d+$/;
     if (!telefonoRegex.test(input.value.trim())) {
-        mostrarError(input, 'El teléfono tiene que ser valido.');
+        mostrarError(input, 'El teléfono tiene que ser válido.');
         return false;
     }
     else {
@@ -69,7 +80,7 @@ function validarCheck(input, label) {
 }
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const nombreValido = validarCampoVacio(nombreInput, 'nombre');
+    const nombreValido = validarCampoVacio(nombreInput, 'nombre') && validarNombre(nombreInput);
     const correoValido = validarCampoVacio(correoInput, 'correo') && validarCorreo(correoInput);
     const telefonoValido = validarCampoVacio(telefonoInput, 'teléfono') && validarTelefono(telefonoInput);
     const checkValido = validarCheck(checkInput, checkLabel);

@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 body{
@@ -12,11 +13,11 @@ body{
 }
 
 img{
-    width: 1.5rem;
+    width: 1.7rem;
 }
 
 .contenedor{
-    width: 100%;
+    width: 100vw;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -27,19 +28,23 @@ img{
     "parte4"
     "parte5";
     position: relative;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 
 .grupo1 {
     width: 100%;
+    max-width: 100vw;
     grid-area: parte1;
     background-image: url(../IMG/oficiana-1.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    height: 100dvh;
-    overflow: hidden; 
+    height: 100vh;
+    overflow: hidden;
+    padding: 1.4rem 1rem; 
 }
 
 .grupo1::before {
@@ -62,6 +67,7 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0.4rem;
 }
 
 .nav, .nav2, .texto1{
@@ -70,11 +76,11 @@ img{
 }
 
 .nav-movil{
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 0.9rem;
+    padding: 0 1rem;
 }
 
 .logo-movil{
@@ -98,7 +104,6 @@ img{
 .menu-movil.activo {
     display: flex; 
 }
-
 
 .equis{
     position: fixed;
@@ -125,31 +130,32 @@ img{
 .sub-movil{
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: clamp(1.3rem, 3vw + 1rem, 1.7rem);
     color: #1c1c1c;
 }
 
-
 .texto1{
-    width: 100%;
-    height: 10rem;
+    max-width: 98%;
+    min-width: 10rem;
+    height: 15rem;
     position: relative;
-    top: 50%;
+    top: 45%;
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -50%);
     text-align: center;
     padding: 0 0.8rem;
 }
 
 .titulo{
-    font-size: 1.6rem;
-    font-weight: 450;
+    font-size: clamp(1.6rem,2vw + 1rem, 3rem);
+    font-weight: 500;
     line-height: 1.2;
     color: #fff;
+    overflow: hidden;
 }
 
 .linea1{
-    width: 3rem;
+    width: 30%;
     height: 0.12rem;
     background-color: #ffffffc9;
     margin: 1.7rem auto 2rem;
@@ -157,15 +163,15 @@ img{
 }
 
 .enlace1{
-    font-family: 'Poppins'; 
+    font-family: 'Poppins',sans-serif; 
     text-decoration: none;
     color: #000;
-    font-weight: 400;
+    font-weight: 500;
     background-color: #fff;
     padding: 0.5rem 2rem;
     border-radius: 2rem;
     text-align: center;
-    font-size: 0.95rem;
+    font-size: clamp(0.95rem, 2vw + 1rem, 1.1rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,30 +188,33 @@ img{
 
 .grupo2{
     width: 100%;
+    max-width: 100vw;
     grid-area: parte2;
     display: flex;
     flex-direction: column;
+    background-color: #fcf4f4c0;
+    height: auto;
 }
 
 .texto2{
-    padding: 2rem 1.68rem;
-    background-color: #fcf4f4c0 ;
+    padding: 2rem;
 }
 
 .subtitulo2{
-    padding: 1.5rem 0 2.2rem;
-    font-size: 2.3rem;
+    padding: 1.5rem 0.5rem 2.2rem 0;
+    font-size: clamp(2.8rem, 2vw + 0.6rem, 3.3rem);
     font-weight: 500;
     color: #474747;
 }
 
 .parrafo{
-    font-weight: 100;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     color: #474747;
-    line-height: 1.8;
-    font-size: 1rem;
-    letter-spacing: 0.48px;
+    line-height: 1.7;
+    font-size: clamp(0.75rem, 2vw, 1.5rem);
     padding: 0.1px;
+    letter-spacing: 0.03em;
     margin-bottom: 2rem;
 }
 
@@ -238,22 +247,26 @@ img{
 }
 
 .grupo3{
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
     grid-area: parte3;
     display: flex;
     flex-wrap: wrap;
-    padding: 1rem 0.7rem 2.5rem;
+    padding: 1rem 1rem 2.5rem;    
 }
 
 .texto3{
     text-align: center;
-    margin: 2.5rem auto 0;
+    margin: 2.5rem auto 3rem;
     padding: 0 1rem;
 }
 
 .subtitulo3{
-    font-size: 2rem;
-    font-weight: 200;
+    font-size: 2.5rem;
+    font-weight: 500;
     margin-bottom: 1.5rem;
+    letter-spacing: -0.1rem;
 }
 
 .linea3{
@@ -263,37 +276,73 @@ img{
     background-color: #000;
 }
 
-.cartas{
+.cartas {
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    padding: 0 0.2rem;
+    align-items: stretch;
+    padding: 1rem;
+    margin: 0 auto;
+    gap: 2.5rem 0.5rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
-
-.card{
+  
+.card {
+    background: white;
+    padding: 1rem 0.5rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.07);
+    width: 420px;
+    height: 540px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    font-family: 'Poppins';
-    margin: 0.8rem 0;
+    justify-content: space-between;
+    align-items: center; 
+    text-align: center;
+    margin: 0 auto;
+}
+  
+ 
+.card img {
+    width: 18rem;
+    height: 10.5rem; 
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+  }
+  
+.card p {
+    flex-grow: 1;
+    text-align: justify;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+  
+.card a {
+    align-self: flex-start;
+    padding: 0.5rem 1.5rem;
+    background-color: black;
+    color: white;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .descripcion{
     text-align: justify;
-    color: #474747d9;
-    font-size: clamp(0.83rem, 1vw , 1.4rem);
+    color: #2d2c2cd9;
+    font-size: clamp(0.83rem, 1vw, 1rem);
     line-height: 1.7;
+    padding: 0 0.5rem;
 }
 
 .marca{
     width: 75%;
+    height: 9rem;
     margin: 0 auto;
 }
 
-.marcaN{
-    margin: 2.1rem auto;
-}
 
 .ruta{
     width: max-content;
@@ -307,14 +356,22 @@ img{
 }
 
 .grupo4{
+    width: 100%;
+    max-width: 100vw;
     grid-area: parte4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     background-color: #242424;
-    padding: 1rem 1rem;
+    gap: 1rem;
+    padding: 1.5rem;
 }
 
 .footer{
+    width: 250px;
     color: #fff;
-    margin: 2.5rem 0;
+    margin: 1rem 0;
 }
 
 .foo{
@@ -365,19 +422,117 @@ img{
 }
 
 .grupo5{
+    width: 100%;
+    max-width: 100vw;
     grid-area: parte5;
     background-color: #1c1c1c;
     padding: 2rem 0;
     color: #626060;
     text-align: center;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     font-size: 0.85rem;
     border: none;
+    cursor: default;
+}
+
+@media(min-width: 760px){
+
+    .grupo1{
+        padding: 1.4rem 2rem; 
+    }
+
 }
 
 
 
+@media (min-width: 835px) {
 
+    .contenedor{
+        width: 100vw;
+        overflow: hidden;
+    }
+
+    .logo{
+        width: 9rem;
+    }
+
+    .nav {
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav2 {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.1rem;
+        list-style: none;
+    }
+
+    .submenu .sub {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    .texto1 {
+        max-width: 60%;
+        overflow: hidden;
+    }
+
+    .grupo2 {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-height: max-content;
+    }
+
+    .texto2 {
+        width: 45%;
+        padding: 3rem 1rem 3rem 1.5rem;
+    }
+
+    .caja-mapa {
+        width: 55%;
+        height: 100%;
+    }
+
+    .mapa {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .grupo4 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 4rem;
+    }
+
+}
+
+
+@media (min-width: 1023px) {
+
+    .grupo1{
+		padding: 0.7rem 0.5rem;
+	}
+
+    .texto1 {
+        max-width: 50%;
+    }
+    
+    
+}
 
 
 

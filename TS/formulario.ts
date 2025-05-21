@@ -7,23 +7,21 @@ const telefonoInput = document.getElementById('telefono') as HTMLInputElement;
 const checkInput = document.getElementById('check') as HTMLInputElement;
 const checkLabel = document.querySelector('label[for="check"]') as HTMLLabelElement;
 
-// Mostrar un error debajo del input
 function mostrarError(input: HTMLElement, mensaje: string) {
     let error = input.parentElement?.querySelector('.error') as HTMLElement;
-    
+
     if (!error) {
         error = document.createElement('p');
         error.className = 'error';
         input.parentElement?.appendChild(error);
     }
-    
+
     error.textContent = mensaje;
     error.style.color = 'red';
     error.style.fontSize = '0.8rem';
     error.style.marginTop = '0.3rem';
 }
 
-// Eliminar el error debajo del input
 function eliminarError(input: HTMLElement) {
     const error = input.parentElement?.querySelector('.error');
     if (error) {
@@ -31,10 +29,20 @@ function eliminarError(input: HTMLElement) {
     }
 }
 
-// Validaciones individuales
 function validarCampoVacio(input: HTMLInputElement, campo: string): boolean {
     if (input.value.trim() === '') {
         mostrarError(input, `El campo ${campo} es obligatorio.`);
+        return false;
+    } else {
+        eliminarError(input);
+        return true;
+    }
+}
+
+function validarNombre(input: HTMLInputElement): boolean {
+    const nombreRegex = /^[a-zA-ZÀ-ÿ\s]+$/; 
+    if (!nombreRegex.test(input.value.trim())) {
+        mostrarError(input, 'El nombre solo puede contener letras y espacios.');
         return false;
     } else {
         eliminarError(input);
@@ -56,7 +64,7 @@ function validarCorreo(input: HTMLInputElement): boolean {
 function validarTelefono(input: HTMLInputElement): boolean {
     const telefonoRegex = /^\+?\d+$/;
     if (!telefonoRegex.test(input.value.trim())) {
-        mostrarError(input, 'El teléfono tiene que ser valido.');
+        mostrarError(input, 'El teléfono tiene que ser válido.');
         return false;
     } else {
         eliminarError(input);
@@ -69,16 +77,15 @@ function validarCheck(input: HTMLInputElement, label: HTMLLabelElement): boolean
         label.style.color = 'red';
         return false;
     } else {
-        label.style.color = ''; // Restaurar color normal
+        label.style.color = '';
         return true;
     }
 }
 
-// Validación completa al enviar
 form.addEventListener('submit', function (e: SubmitEvent) {
     e.preventDefault();
 
-    const nombreValido = validarCampoVacio(nombreInput, 'nombre');
+    const nombreValido = validarCampoVacio(nombreInput, 'nombre') && validarNombre(nombreInput);
     const correoValido = validarCampoVacio(correoInput, 'correo') && validarCorreo(correoInput);
     const telefonoValido = validarCampoVacio(telefonoInput, 'teléfono') && validarTelefono(telefonoInput);
     const checkValido = validarCheck(checkInput, checkLabel);

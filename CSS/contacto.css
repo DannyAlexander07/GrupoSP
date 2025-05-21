@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
@@ -9,6 +9,7 @@
 
 body{
     font-family: 'Playfair Display', serif;
+    overflow-x: hidden;
 }
 
 img{
@@ -16,7 +17,7 @@ img{
 }
 
 .contenedor{
-    width: 100%;
+    width: 100vw;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -27,18 +28,22 @@ img{
     "parte4"
     "parte5";
     position: relative;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 
 .grupo1 {
     width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
     grid-area: parte1;
     background-image: url(../IMG/oficina-2.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    height: 50dvh;
+    height: 65vh;
     overflow: hidden; 
 }
 
@@ -62,6 +67,7 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 0.4rem;
 }
 
 .nav, .nav2, .texto1{
@@ -125,7 +131,7 @@ img{
 .sub-movil{
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: clamp(1.3rem, 3vw + 1rem, 1.7rem);
     color: #1c1c1c;
 }
 
@@ -139,11 +145,14 @@ img{
 }
 
 .titulo{
-    font-weight: 400;
-    font-size: 1.5rem;
+    font-weight: 500;
+    font-size: clamp(1.6rem, 3vw + 0.7rem, 2.1rem);
 }
 
 .grupo2{
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
     font-family: 'Poppins';
     grid-area: parte2;
     display: flex;
@@ -156,13 +165,15 @@ img{
 
 .titulo-formulario{
     padding: 0 2rem 0 0;
-    font-size: 1.43rem;
+    font-size: clamp(1.2rem, 2vw + 0.6rem, 1.5rem);
     font-weight: 600;
     text-align: left;
+    max-width: 500px;
+    margin-bottom: 1rem;
 }
 
 .bloque{
-    margin: 1.5rem 0;
+    margin: 0.5rem 0;
     display: flex;
     flex-direction: column;
 }
@@ -175,6 +186,7 @@ img{
 .input{
     display: block;
     width: 100%;
+    max-width: 33rem;
     padding: 0.55rem 0.7rem;
     outline: none;
     border-radius: 0.3rem;
@@ -191,6 +203,7 @@ img{
 .mensaje{
     display: block;
     width: 100%;
+    max-width: 33rem;
     height: 15rem;
     margin-top: 0.3rem;
     border: 1.5px solid #ccc;
@@ -242,25 +255,33 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 5rem;
 }
 
 .mapa {
     width: 100%;
     height: auto;
-    max-height: 25rem;
+    max-height: 40rem;
 }
 
 
 .grupo3{
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
     grid-area: parte3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 3rem;
     background-color: #242424;
-    padding: 1rem 1rem;
+    padding: 1.5rem;
 }
-
 .footer{
+    width: 250px;
     color: #fff;
-    margin: 2.5rem 0;
+    margin: 1rem 0;
 }
 
 .foo{
@@ -275,6 +296,7 @@ img{
 .span:hover,
 .span:hover .foo {
     color: #7c7a7a;
+    font-weight: 0;
     cursor: pointer;
 }
 
@@ -294,6 +316,7 @@ img{
     font-weight: 700;
 }
 
+
 .span{
     font-family: 'Poppins';
     color: #fffffff7;
@@ -310,16 +333,119 @@ img{
 }
 
 .grupo4{
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
     grid-area: parte4;
     background-color: #1c1c1c;
-    padding: 2rem 0;
+    padding: 2rem;
     color: #626060;
     text-align: center;
     font-family: 'Poppins';
     font-size: 0.85rem;
     border: none;
+    cursor: default;
 }
 
+@media(min-width: 760px){
+
+    .grupo1{
+        padding: 1.4rem 2rem; 
+    }
+}
+
+@media (min-width: 835px) {
+
+    .grupo1{
+        height: 72vh;
+    }
+
+    .logo{
+        width: 9rem;
+    }
+
+    .nav {
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav2 {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+    }
+
+    .submenu .sub {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    .texto1 {
+        top: 35%;
+        transform: translate(-50%, -50%);
+        max-width: 60%;
+    }
+
+    .grupo2 {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        max-height: max-content;
+    }
+
+    .formulario {
+        width: 40%;
+        padding: 1rem 1rem 3rem 1rem;
+    }
+
+    .mapa-contacto {
+        width: 60%;
+        height: 100%;
+        padding: 3rem;
+    }
+
+    .mapa {
+        display: block;
+        width: 100%;
+    }
+
+    .grupo3{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+
+    .texto1 {
+        max-width: 50%;
+    }
+
+    .nav{
+        padding: 0.8rem 2rem;
+    }
+
+    .titulo {
+        font-size: 3rem;
+    }
+
+    .grupo1{
+        height: 85vh;
+        padding: 0.7rem 0.4rem;
+    }
+
+}
 
 
 

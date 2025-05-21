@@ -1,2 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+img{
+    width: 1.7rem;
+}
+
+.contenedor{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "parte1"
+    "parte2"
+    "parte3"
+    "parte4"
+    "parte5";
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.grupo1{
+    width: 100%;
+    max-width: 100vw;
+    grid-area: parte1;
+    background-image: url(../IMG/oficiana-1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 80vh;
+    min-height: 65dvh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.grupo1::before {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.68; 
+    z-index: 1; 
+}
+
+.nav{
+    display: none;
+}
+
+.nav2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.4rem;
+}
+
+.nav, .nav2, .texto-titulo{
+    position: relative;
+    z-index: 2;
+}
+
+.nav-movil{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0.9rem;
+}
+
+.logo-movil{
+    width: 9rem;
+}
+
+
+.menu-movil {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.9;
+    z-index: 999;
+}
+
+.menu-movil.activo {
+    display: flex; 
+}
+
+.equis{
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    height: 1.5rem;
+}
+
+.movil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 1.8rem;
+    height: 100vh;
+}
+
+.submenu-movil{
+    list-style: none;
+}
+
+.sub-movil{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: clamp(1.3rem, 3vw + 1rem, 1.7rem);
+    color: #1c1c1c;
+}
+
+.texto-titulo{
+    max-width: 80%;
+    min-width: 10rem;
+    height: 10rem;
+    position: relative;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-align: center;
+    padding: 0 0.8rem;
+}
+
+.titulo{
+    font-size: clamp(1.6rem,2vw + 1rem, 2.8rem);
+    font-weight: 500;
+    line-height: 1.2;
+    color: #fff;
+    text-align: center;
+}
+
+.linea1{
+    width: 3rem;
+    height: 0.12rem;
+    background-color: #ffffffc9;
+    margin: 1.7rem auto 2rem;
+    padding: 0.1px;
+}
+
+
+.grupo2{
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+    grid-area: parte2;
+    word-wrap: break-word;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1.6rem 3rem;
+    column-gap: 1rem;
+}
+
+.marca{
+    width: 90%;
+    margin-bottom: 2rem;
+}
+
+.parrafo1{
+    font-weight: 300;
+    color: #242424c7;
+    font-size: clamp(0.8rem, 2vw + 0.6rem, 1rem);
+    line-height: 2;
+    word-wrap: break-word;
+}
+
+.subtitulo2{
+    font-size: 1.3rem;
+    font-weight: 200;
+    color: #3d3c3c;
+    border-bottom: 1px solid #000;
+    width: max-content;
+    padding-bottom: 0.2rem;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+.subtitulo2:hover{
+    color: #101010;
+}
+
+.lista{
+    margin: 1.2rem 0 2rem 2.5rem;
+    display: none;
+    flex-direction: column;
+    row-gap: 0.7rem;
+    cursor: pointer;
+}
+
+.sub-lista{
+    font-weight: 200;
+    font-size: 1.04rem;
+}
+
+.crema{
+    background-color: #f8f6f6 ;
+}
+
+
+.lista2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0.7rem;
+    margin: 0.6rem 0 0 2.5rem;
+}
+
+.titulo-lista{
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.sub-lista2{
+    line-height: 1.7;
+    font-weight: 200;
+}
+
+.p1{
+    margin-bottom: 3rem;
+}
+
+
+.grupo3{
+    grid-area: parte3;
+    word-wrap: break-word;
+    background-image: url(../IMG/mapa1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 100vw;
+    height: 26rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.titulo-grupo3{
+    font-size: 2.5rem;
+    padding: 0 2rem;
+    font-weight: 500;
+}
+
+.enlace-grupo3{
+    text-decoration: none;
+    color: #242424;
+    font-size: 1.2rem;
+    padding: 0.7rem 1.3rem;
+    border: 2px solid #242424;
+    background-color: transparent;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    font-weight: 400;
+}
+
+.enlace-grupo3:hover{
+    background-color: #000;
+    color: #fff;
+    font-weight: 400;
+}
+
+.grupo4{
+    width: 100%;
+    max-width: 100vw;
+    grid-area: parte4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #242424;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.footer{
+    width: 250px;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.foo{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.foo:hover,
+.foo:hover .span,
+.span:hover,
+.span:hover .foo {
+    color: #7c7a7a;
+    font-weight: 0;
+    cursor: pointer;
+}
+
+.subfooter{
+    list-style: none;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.foo2{
+    color: #ffffffc2;
+}
+
+.titulo-footer{
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.span{
+    font-family: 'Poppins';
+    color: #fffffff7;
+    font-weight: 200;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.in{
+    font-family: 'Poppins', 'Serif';
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #707070;
+}
+
+.grupo5{
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+    grid-area: parte5;
+    background-color: #1c1c1c;
+    padding: 2rem 0;
+    color: #626060;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 0.85rem;
+    border: none;
+    cursor: default;
+    word-wrap: break-word;
+}
+
+@media(min-width: 760px){
+
+    .grupo1{
+        padding: 1.4rem 2rem; 
+    }
+
+    img{
+        width: 2rem;
+    }
+
+    .grupo3{
+        height: 31rem;
+    }
+}
+
+@media (min-width: 835px) {
+
+
+    .logo{
+        width: 9rem;
+    }
+
+    .nav {
+        font-family: 'Poppins',sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .nav2 {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.1rem;
+        list-style: none;;
+    }
+
+    .submenu .sub {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+
+    .texto1{
+        width: 500px;
+        margin-left: 0;
+    }
+
+    .grupo2 {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-height: max-content;
+    }
+
+    .seccion{
+        width: 100%;
+        height: auto;
+        min-height: 45rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 3rem 2rem;
+    }
+
+    .crema{
+        width: 100%;
+        flex-direction: row-reverse;
+    }
+
+    .marca{
+        width: 30rem;
+    }
+
+    .caja-mapa {
+        width: 50%;
+        height: 100%;
+        padding: 3rem;
+    }
+
+    .mapa {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .grupo3{
+        height: 35rem;
+        background-attachment: fixed;
+        background-position: center top;
+    }
+
+    .grupo4{
+        flex-direction: row;
+    }
+
+    
+
+}
+
+
+@media (min-width: 1024px) {
+
+    .grupo1{
+        padding: 0.7rem 0.4rem;
+    }
+
+    .texto1 {
+        max-width: 50%;
+    }
+
+    .nav{
+        padding: 0.8rem 1.5rem;
+    }
+
+
+    .grupo4 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 4rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

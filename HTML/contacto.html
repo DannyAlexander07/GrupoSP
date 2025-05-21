@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/contacto.css">
+    <meta name="description" content="Ponte en contacto con Grupo SP. Encuentra nuestro formulario, teléfonos y direcciones en Perú, Colombia, Panamá y Chile. Estamos para ayudarte.">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+    <link rel="icon" href="../IMG/sp-logo2.svg" type="image/svg">
     <title>Contacto - Grupo SP</title>
 </head>
 <body>
     <div class="contenedor">
-        <div class="grupo1">
+        <div class="grupo1" data-aos="slide-down">
             <div class="nav">
                 <div class="header">
                     <img src="../IMG/logo-sp-header.png" alt="Grupo Sp" class="logo">
                 </div>
                 <ul class="menu">
-                    <li class="submenu"><a href="#" class="sub">Inicio</a></li>
-                    <li class="submenu"><a href="#" class="sub">Sobre nosotros</a></li>
-                    <li class="submenu"><a href="#" class="sub">Nuestras empresas</a></li>
-                    <li class="submenu"><a href="#" class="sub">Contacto</a></li>
+                    <li class="submenu"><a href="../HTML/index.html" class="sub">Inicio</a></li>
+                    <li class="submenu"><a href="../HTML/nosotros.html" class="sub">Sobre nosotros</a></li>
+                    <li class="submenu"><a href="../HTML/empresas.html" class="sub">Nuestras empresas</a></li>
+                    <li class="submenu"><a href="../HTML/contacto.html" class="sub">Contacto</a></li>
                 </ul>
             </div>
             <div class="nav2">
@@ -27,22 +30,22 @@
                 </div>
             </div>
             <div class="texto1">
-                <h2 class="titulo">Contáctanos</h2>
+                <h1 class="titulo">Contáctanos</h1>
             </div>
         </div>
         <div class="menu-movil" id="menu-movil">
             <img src="../IMG/equis.svg" alt="menu-bar" class="equis" id="boton-equis">
             <ul class="movil">
-                <li class="submenu-movil"><a href="#" class="sub-movil">Inicio</a></li>
-                <li class="submenu-movil"><a href="#" class="sub-movil">Sobre nosotros</a></li>
-                <li class="submenu-movil"><a href="#" class="sub-movil">Nuestras empresas</a></li>
-                <li class="submenu-movil"><a href="#" class="sub-movil">Contacto</a></li>
+                <li class="submenu-movil"><a href="../HTML/index.html" class="sub-movil">Inicio</a></li>
+                <li class="submenu-movil"><a href="../HTML/nosotros.html" class="sub-movil">Sobre nosotros</a></li>
+                <li class="submenu-movil"><a href="../HTML/empresas.html" class="sub-movil">Nuestras empresas</a></li>
+                <li class="submenu-movil"><a href="../HTML/contacto.html" class="sub-movil">Contacto</a></li>
             </ul>
         </div>
-        <div class="grupo2">
+        <div class="grupo2" data-aos="zoom-in-up">
             <div class="formulario">
                 <h2 class="titulo-formulario">Déjanos tus datos y nos pondremos en contácto contigo.</h2>
-                <form action="" class="form" id="form">
+                <form action="https://formsubmit.co/24c8a454285857553b121d3d517cfc4e"  method="post" class="form" id="form">
                     <div class="bloque">
                         <label for="nombre" class="label">Tu nombre (requerido)</label>
                         <input type="text" name="nombre" class="input" id="nombre" required>
@@ -74,57 +77,68 @@
                         <p class="error"></p>
                     </div>
                     <input type="submit" class="enviar" id="enviar" value="Enviar">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/Proyecto2/HTML/index.html">
+                    <input type="hidden" name="_template" value="box">
+                    <input type="hidden" name="_subject" value="[Grupo SP] Nuevo Envio Formulario!">
                 </form>
                 <p class="parrafo">Para atención de denuncias o consultas por actos de soborno, escríbanos a</p>
                 <a href="#" class="enlace">denuncias.antisoborno@gruposp.pe</a>
             </div>
-            <div class="mapa-contacto">
-                <img src="../IMG/mapa1.png" alt="mapa" class="mapa">
+            <div class="mapa-contacto" data-aos="fade-right">
+                <img src="../IMG/mapa1-1536x1343.png" alt="Mapa con ubicaciones de las oficinas de Grupo SP" class="mapa">
             </div>
         </div>
-        <div class="grupo3">
+        <div class="grupo3" data-aos="fade-up">
             <ul class="footer">
                 <h4 class="titulo-footer">Dirección</h4>
                 <li class="subfooter">
-                    <a href="#" class="foo">Perú: <span class="span">Avenida José Pardo 434 Piso 5 Edificio LIT ONE, Miraflores, Lima</span></a>
+                    <a href="https://maps.app.goo.gl/FmMPZgaCMM3zSZrA7" target="_blank" class="foo">Perú: <span class="span">Avenida José Pardo 434 Piso 5 Edificio LIT ONE, Miraflores, Lima</span></a>
                 </li>
                 <li class="subfooter">
-                    <a href="#" class="foo">Colombia: <span class="span">Carrera 17 # 89-31 Oficina 702, Bogotá</span></a>
+                    <a href="https://maps.app.goo.gl/U2f4pav7HHosgMdMA" target="_blank" class="foo">Colombia: <span class="span">Carrera 17 # 89-31 Oficina 702, Bogotá</span></a>
                 </li>
                 <li class="subfooter">
-                    <a href="#" class="foo">Panamá: <span class="span">Plaza 2000, Calle 52 Este y Calle 50, Marbella</span></a>
+                    <a href="https://maps.app.goo.gl/hdFRtBpJcsBkuEVt8" target="_blank" class="foo">Panamá: <span class="span">Plaza 2000, Calle 52 Este y Calle 50, Marbella</span></a>
                 </li>
                 <li class="subfooter">
-                    <a href="#" class="foo">Chile: <span class="span"> Avenida Kennedy 7900 of 809, Vitacura.</span></a>
+                    <a href="https://maps.app.goo.gl/8yTGPdk4joF8BPv16" target="_blank" class="foo">Chile: <span class="span"> Avenida Kennedy 7900 of 809, Vitacura.</span></a>
                 </li>
             </ul>   
             <ul class="footer">
                 <h4 class="titulo-footer">Contacto</h4>
                 <li class="subfooter">
-                    <a href="#" class="foo"><span class="span">info@gruposp.pea</span></a>
+                    <a href="mailto:info@gruposp.pe" class="foo"><span class="span">info@gruposp.pe</span></a>
                 </li>
                 <li class="subfooter">
-                    <a href="#" class="foo"><span class="span">+51 1 715 5585</span></a>
+                    <a href="tel:+517155585" class="foo"><span class="span">+51 1 715 5585</span></a>
                 </li>
             </ul>
             <ul class="footer">
                 <h4 class="titulo-footer">Redes Sociales</h4>
                 <li class="subfooter">
-                    <a href="#" class="foo"><span class="span in">in</span></a>
+                    <a href="https://www.linkedin.com/company/grupo-sp-latam/" class="foo"><span class="span in">in</span></a>
                 </li>
             </ul>
             <ul class="footer">
                 <h4 class="titulo-footer">Enlaces</h4>
                 <li class="subfooter">
-                    <a href="#" class="foo foo2">Política de privacidad y protección de datos personales</a>
+                    <a href="../HTML/politica.html" class="foo foo2">Política de privacidad y protección de datos personales</a>
                 </li>
             </ul>
         </div>
         <div class="grupo4">
-            <p class="parrafo-copy">© 2025 Grupo SP | Todos los derechos reservados.</p>
+            <p id="copyright" class="parrafo-copy"></p>
         </div>
     </div>
     <script src="../JS/formulario.js"></script>
     <script src="../JS/menu-movil.js"></script>
+    <script src="../JS/copy.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        duration: 1000, 
+        once: false, 
+    });
+    </script>
 </body>
 </html>
