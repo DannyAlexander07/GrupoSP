@@ -49,6 +49,8 @@ Proyecto2/
 │   └── tsconfig.json
 │
 └── README.md          # Este archivo
+```
+
 
 ## 📌 OBJETIVO DEL PROYECTO
 Este proyecto fue desarrollado como parte de mi práctica en desarrollo frontend, integrando buenas prácticas como modularización, separación de responsabilidades, uso de librerías externas (como AOS.js), y TypeScript.
