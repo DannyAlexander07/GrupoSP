@@ -13,6 +13,8 @@ Está estructurada en módulos separados para cada sección del sitio, como cont
 
 ## 🧩 Estructura del proyecto
 
+```plaintext
+
 Proyecto2/
 │
 ├── CSS/               # Estilos separados por sección
