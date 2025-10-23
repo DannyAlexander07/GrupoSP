@@ -1,4 +1,4 @@
-# Proyecto2 – Página Web Interactiva GRUPO SP
+# Página Web Interactiva GRUPO SP
 
 Este proyecto es una página web multi-sección desarrollada con **HTML**, **CSS**, **TypeScript/JavaScript** y la librería **AOS.js** para animaciones al hacer scroll.  
 Está estructurada en módulos separados para cada sección del sitio, como contacto, empresas, políticas, y más.
