@@ -55,6 +55,11 @@ Proyecto2/
 ## 📌 OBJETIVO DEL PROYECTO
 Este proyecto fue desarrollado como parte de mi práctica en desarrollo frontend, integrando buenas prácticas como modularización, separación de responsabilidades, uso de librerías externas (como AOS.js), y TypeScript.
 
+🌎 Sitio web en línea
+
+Puedes visitar la página desplegada aquí:
+🔗 https://gruposp.pe/
+
 ## ✍️ Autor
 Danny Alexander
 GitHub: @DannyAlexander07
